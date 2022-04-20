@@ -1,0 +1,17 @@
+<div>
+<h2>USER AUTHENTICATION PAGE</h2>
+
+<form>
+    <label class="user">User Name:  </label> 
+<input type="text" (input)="onUserName($event)" class="tex"> <br><br>
+<label class="pass">Password:  </label> 
+<input type="password" (input)="onPass($event)" class="tex"> <br><br>
+<button type="button" class="btn btn-primary" (click)="onsubmit()"
+>submit</button>
+<br><br>
+<label *ngIf="success; else failure">AUTHENTICATION SUCCESS</label>
+<ng-template #failure>
+    <label>AUTHENTICATION FAILED</label>
+</ng-template>
+</form>
+</div>
